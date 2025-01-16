@@ -1,0 +1,48 @@
+tasks:
+  - name: "打开微信"
+    app_package: "com.tencent.mm"
+    schedules:
+      - "10:30"
+      - "16:30"
+    startup_wait: 5  # 应用启动等待时间（秒）
+    actions:
+      - type: "click"
+        image: "wechat.png"
+        wait: 2  # 等待时间（秒）
+        retries: 3  # 重试次数
+        retry_interval: 1  # 重试间隔（秒）
+
+  - name: "打开企业微信"
+    app_package: "com.tencent.wework"
+    schedules:  # 企业微信的打开时间
+      - "08:43"
+      - "19:45"
+    startup_wait: 5  # 应用启动等待时间（秒）
+    actions:
+      - type: "click"
+        image: "wework_workspace.png"
+        wait: 2
+        retries: 3
+        retry_interval: 1
+      - type: "click"
+        image: "wework_card.png"
+        wait: 2
+        retries: 3
+        retry_interval: 1
+      - type: "wait"
+        duration: 120
+      - type: "close_app"
+        wait: 1
+
+  - name: "打开抖音"
+    app_package: "com.ss.android.ugc.aweme"
+    schedules:
+      - "08:50"
+      - "12:50"
+    startup_wait: 5
+    actions:
+      - type: "click"
+        image: "douyin.png"
+        wait: 2
+        retries: 3
+        retry_interval: 1
