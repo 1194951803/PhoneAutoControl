@@ -41,6 +41,7 @@ python main.py
 
 ## 目录结构
 
+```bash
 ├── main.py # 主程序
 ├── config.yaml # 配置文件
 ├── requirements.txt # 依赖包
@@ -49,8 +50,9 @@ python main.py
 │ ├── scrcpy.py # 投屏控制模块
 │ └── cv.py # 图像识别模块
 └── images/ # 目标图片目录
+```
 
-使用说明：
+## 使用说明：
 
 1. 将需要点击的目标图片（如按钮、图标等）保存到 `images` 目录下
 2. 在 `config.yaml` 中配置任务计划，包括：
